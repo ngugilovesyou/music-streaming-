@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Music Streaming Website</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Music Streaming Website</h1>
+  </header>
+  <main>
+    <h2>Now Playing:</h2>
+    <h3 id="song-title"></h3>
+    <audio id="player" controls></audio>
+    <br>
+    <button id="play-button">Play</button>
+    <button id="pause-button">Pause</button>
+  </main>
+  <script>
+    // Get audio element and buttons
+    const player = document.getElementById("player");
+    const playButton = document.getElementById("play-button");
+    const pauseButton = document.getElementById("pause-button");
+
+    // Set audio source and song title
+    player.src = "https://example.com/song.mp3";
+    document.getElementById("song-title").innerHTML = "Song Title";
+     // Play and pause audio on button click
+    playButton.addEventListener("click", function() {
+      player.play();
+    });
+    pauseButton.addEventListener("click", function() {
+      player.pause();
+    });
+  </script>
+  <nav>
+    <ul>
+      <li><a href="#featured">Featured</a></li>
+      <li><a href="#genres">Genres</a></li>
+      <li><a href="#new-releases">New Releases</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section id="featured">
+      <h2>Featured Playlists</h2>
+      <div class="playlist">
+        <img src="https://via.placeholder.com/150" alt="Playlist cover image">
+        <h3>Playlist 1</h3>
+      </div>
+      <div class="playlist">
+        <img src="https://via.placeholder.com/150" alt="Playlist cover image">
+        <h3>Playlist 2</h3>
+      </div>
+      <div class="playlist">
+        <img src="https://via.placeholder.com/150" alt="Playlist cover image">
+        <h3>Playlist 3</h3>
+      </div>
+    </section>
+    <section id="genres">
+      <h2>Genres</h2>
+      <ul>
+        <li><a href="#">Pop</a></li>
+        <li><a href="#">Rock</a></li>
+        <li><a href="#">Hip Hop</a></li>
+        <li><a href="#">Country</a></li>
+      </ul>
+    </section>
+    <section id="new-releases">
+      <h2>New Releases</h2>
+      <ol>
+        <li>Album 1</li>
+        <li>Album 2</li>
+        <li>Album 3</li>
+      </ol>
+    </section>
+  </main>
+  <footer>
+    <p>Copyright 2021</p>
+  </footer>
+</body>
+</html>
